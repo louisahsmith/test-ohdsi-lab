@@ -5,8 +5,9 @@ library(DatabaseConnector)
 con <- connect(dbms = "postgresql",
                server = "ohdsi-lab-redshift-cluster-prod.clsyktjhufn7.us-east-1.redshift.amazonaws.com/ohdsi_lab",
                port = 5439,
-               user = "usr9",
-               password = "2H2pS9G6ShKq")
+               user = keyring::key_get("redshiftUser"),
+               password = keyring::key_get("redshiftPassword")
+)
 
 person <- tbl(con, inDatabaseSchema("omop_cdm_53_pmtx_202203", "person"))
 
