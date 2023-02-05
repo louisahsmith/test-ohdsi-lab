@@ -22,7 +22,7 @@ Install HADES packages:
 options(install.packages.compile.from.source = "never")
 remotes::install_github("ohdsi/Hades", upgrade = "always")
 ```
-I don't actually think I needed to do this because I think they were already there, but if there are no drivers in 'C:\JDBCDrivers', run this:
+I don't actually think I needed to do this because I think they were already there, possibly because I downloaded them when I first opened DBeaver, but if there are no drivers in 'C:\JDBCDrivers', run this:
 ```r
 DatabaseConnector::downloadJdbcDrivers("postgresql")
 ```
