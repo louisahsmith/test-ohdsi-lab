@@ -2,7 +2,7 @@ library(dplyr)
 library(dbplyr)
 library(DatabaseConnector)
 
-con <- connect(dbms = "postgresql",
+con <- connect(dbms = "redshift",
                server = "ohdsi-lab-redshift-cluster-prod.clsyktjhufn7.us-east-1.redshift.amazonaws.com/ohdsi_lab",
                port = 5439,
                user = keyring::key_get("redshiftUser"),

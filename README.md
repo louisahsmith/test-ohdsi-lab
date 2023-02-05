@@ -26,7 +26,7 @@ I don't actually think I needed to do this because I think they were already the
 ```r
 DatabaseConnector::downloadJdbcDrivers("postgresql")
 ```
-Use the `keyring` package to store your username and password in the prompts:
+Use the `keyring` package to store your username and password via the prompts:
 ```r
 keyring::key_set("redshiftUser")
 keyring::key_set("redshiftPassword")
@@ -36,11 +36,11 @@ Then connect to the database:
 library(dbplyr)
 library(DatabaseConnector)
 
-con <- connect(dbms = "postgresql",
+con <- connect(dbms = "redshift",
                server = "ohdsi-lab-redshift-cluster-prod.clsyktjhufn7.us-east-1.redshift.amazonaws.com/ohdsi_lab",
                port = 5439,
                user = keyring::key_get("redshiftUser"),
-               password = keyring::key_get("redshiftPassword")
+               password = keyring::key_get("redshiftPassword"))
 ```
 Check that the connection worked:
 ```r
