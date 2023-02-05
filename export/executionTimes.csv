@@ -1,0 +1,22 @@
+task,startTime,cohortIds,executionTime,parent
+getCdmDataSourceInformation,2023-02-04T23:01:45Z,,1.39687085151672,executeDiagnostics
+observationPeriodDateRange,2023-02-04T23:01:47Z,,7.14229607582092,executeDiagnostics
+getInclusionStats,2023-02-04T23:01:55Z,,5.10549592971802,executeDiagnostics
+getInclusionStatsCohortGenerator,2023-02-04T23:02:03Z,,10.456041097641,getInclusionStats
+getInclusionStats,2023-02-04T23:02:03Z,,15.1916408538818,executeDiagnostics
+instantiateUniqueConceptSets,2023-02-04T23:02:20Z,,2.7527539730072,runConceptSetDiagnostics
+createConceptCountsTable,2023-02-04T23:02:23Z,,9.83309801419576,runConceptSetDiagnostics
+runIncludedSourceConcepts,2023-02-04T23:12:13Z,,5.56671794652939,runConceptSetDiagnostics
+orphanConcepts,2023-02-04T23:20:14Z,concept_set- ,50.3608260154724,runConceptSetDiagnostics
+allOrphanConcepts,2023-02-04T23:20:14Z,,52.4528181552887,runConceptSetDiagnostics
+runConceptSetDiagnostics,2023-02-04T23:02:18Z,,18.8633637984594,executeDiagnostics
+executeVisitContextDiagnostics,2023-02-04T23:21:10Z,,44.7168488502502,executeDiagnostics
+getIncidenceRate,2023-02-04T23:21:54Z,1,2.28317600091298,computeIncidenceRates
+computeIncidenceRates,2023-02-04T23:21:54Z,,2.30984280109406,executeDiagnostics
+executeCohortRelationshipDiagnostics,2023-02-04T23:24:13Z,,2.7469789981842,executeDiagnostics
+getDbCovariateData,2023-02-04T23:24:16Z,1,9.45617014964422,getCohortCharacteristics
+executeCohortCharacterization,2023-02-04T23:24:16Z,,9.80910163323085,executeDiagnostics
+exportConceptInformation,2023-02-04T23:34:04Z,,1.23439604838689,executeDiagnostics
+DeleteConceptIdTable,2023-02-04T23:35:19Z,,0.0850050449371338,executeDiagnostics
+executeDiagnostics,2023-02-04T23:01:41Z,,33.6317419012388,
+writeResultsZip,2023-02-04T23:35:20Z,,2.36097717285156,executeDiagnostics
