@@ -15,8 +15,10 @@ mySchema <- paste0("work_", keyring::key_get("redshiftUser"))
 # used previous to generate cohort
 cohortDefinitionSet <- CDMConnector::readCohortSet("cohorts")
 # the next function also needs the json itself
-cohortDefinitionSet$json <- paste(readLines("cohorts/new_endometriosis.json"), 
-                                  collapse="\n")
+cohortDefinitionSet$json <- c(
+  paste(readLines("cohorts/new_endometriosis.json"), collapse = "\n"),
+  paste(readLines("cohorts/endometriosis_w_hysterectomy.json"), collapse = "\n")
+)
 
 # run diagnostics on this cohort
 # the export folder now has stuff that's safe to take off the server
@@ -30,3 +32,7 @@ executeDiagnostics(cohortDefinitionSet,
                    databaseId = "Pharmetrics",
                    minCellCount = 5
 )
+
+createMergedResultsFile(dataFolder = "export", 
+                        sqliteDbPath = "endometriosisDiagnositics.sqlite")
+launchDiagnosticsExplorer("endometriosisDiagnositics.sqlite")
