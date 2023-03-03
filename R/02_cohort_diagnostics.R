@@ -11,14 +11,17 @@ connectionDetails <- createConnectionDetails(dbms = "redshift",
 # my tables on the database
 mySchema <- paste0("work_", keyring::key_get("redshiftUser"))
 
-# this directory contains json files with the cohort definition copy-pasted from Atlas
-# used previous to generate cohort
-cohortDefinitionSet <- CDMConnector::readCohortSet("cohorts")
-# the next function also needs the json itself
-cohortDefinitionSet$json <- c(
-  paste(readLines("cohorts/new_endometriosis.json"), collapse = "\n"),
-  paste(readLines("cohorts/endometriosis_w_hysterectomy.json"), collapse = "\n")
-)
+# use webapi to pull cohort definition from atlas
+cohortIds <- 2 # cohort ids from atlas
+baseUrl <- "https://atlas.roux-ohdsi-prod.aws.northeastern.edu/WebAPI"
+
+ROhdsiWebApi::authorizeWebApi(baseUrl, 
+                              authMethod = "db", 
+                              webApiUsername = keyring::key_get("redshiftUser"), 
+                              webApiPassword = keyring::key_get("redshiftPassword"))
+
+cohortDefinitionSet <- ROhdsiWebApi::exportCohortDefinitionSet(baseUrl = baseUrl,
+                                                               cohortIds = cohortIds)
 
 # run diagnostics on this cohort
 # the export folder now has stuff that's safe to take off the server
@@ -35,4 +38,5 @@ executeDiagnostics(cohortDefinitionSet,
 
 createMergedResultsFile(dataFolder = "export", 
                         sqliteDbPath = "endometriosisDiagnositics.sqlite")
+
 launchDiagnosticsExplorer("endometriosisDiagnositics.sqlite")

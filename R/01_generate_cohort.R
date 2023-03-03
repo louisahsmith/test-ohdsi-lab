@@ -11,8 +11,17 @@ connectionDetails <- createConnectionDetails(dbms = "redshift",
 # my tables on the database
 mySchema <- paste0("work_", keyring::key_get("redshiftUser"))
 
-# this directory contains json files with the cohort definition copy-pasted from Atlas
-cohortDefinitionSet <- CDMConnector::readCohortSet("cohorts")
+# use webapi to pull cohort definition from atlas
+cohortIds <- 2 # cohort ids from atlas
+baseUrl <- "https://atlas.roux-ohdsi-prod.aws.northeastern.edu/WebAPI"
+
+ROhdsiWebApi::authorizeWebApi(baseUrl, 
+                              authMethod = "db", 
+                              webApiUsername = keyring::key_get("redshiftUser"), 
+                              webApiPassword = keyring::key_get("redshiftPassword"))
+
+cohortDefinitionSet <- ROhdsiWebApi::exportCohortDefinitionSet(baseUrl = baseUrl,
+                                                               cohortIds = cohortIds)
 
 # choose what the table names should be called that hold the cohort and 
 # statistics about it
