@@ -59,14 +59,14 @@
       "Package": "CohortDiagnostics",
       "Version": "3.1.2",
       "Source": "GitHub",
-      "Remotes": "ohdsi/Eunomia, ohdsi/FeatureExtraction,\n        ohdsi/ResultModelManager, ohdsi/ROhdsiWebApi, ohdsi/CirceR,\n        ohdsi/CohortGenerator",
       "RemoteType": "github",
+      "Remotes": "ohdsi/Eunomia, ohdsi/FeatureExtraction, ohdsi/ResultModelManager,\n    ohdsi/ROhdsiWebApi, ohdsi/CirceR, ohdsi/CohortGenerator",
       "RemoteHost": "api.github.com",
       "RemoteRepo": "CohortDiagnostics",
       "RemoteUsername": "ohdsi",
       "RemoteRef": "HEAD",
       "RemoteSha": "21d6eb3838e64f48c44b05f8d82c6ebcf5db389c",
-      "Hash": "c2ef53a5fad28f6f397d7bc6142d1e9c",
+      "Hash": "5a9ef24647ea959ca87a919ce7bb053f",
       "Requirements": [
         "Andromeda",
         "CohortGenerator",
@@ -90,14 +90,14 @@
       "Package": "CohortGenerator",
       "Version": "0.7.0",
       "Source": "GitHub",
-      "Remotes": "ohdsi/CirceR, ohdsi/Eunomia, ohdsi/ROhdsiWebApi",
       "RemoteType": "github",
+      "Remotes": "ohdsi/CirceR, ohdsi/Eunomia, ohdsi/ROhdsiWebApi",
       "RemoteHost": "api.github.com",
       "RemoteRepo": "CohortGenerator",
       "RemoteUsername": "ohdsi",
       "RemoteRef": "HEAD",
       "RemoteSha": "f170a5085aa729dc9fd03491e9b653ac7439dd5c",
-      "Hash": "f55b718552f370126db9558259bd0d8e",
+      "Hash": "5e4b1d4abffb3eeb508fbce926d5ba80",
       "Requirements": [
         "DatabaseConnector",
         "ParallelLogger",
@@ -145,14 +145,14 @@
       "Package": "FeatureExtraction",
       "Version": "3.2.0",
       "Source": "GitHub",
-      "Remotes": "ohdsi/Eunomia",
       "RemoteType": "github",
+      "Remotes": "ohdsi/Eunomia",
       "RemoteHost": "api.github.com",
       "RemoteRepo": "FeatureExtraction",
       "RemoteUsername": "ohdsi",
       "RemoteRef": "HEAD",
       "RemoteSha": "5363f5f4cdaf8b31ce9f193861169047b11ea41c",
-      "Hash": "2e6f81230989e15003feaf3dad0628ee",
+      "Hash": "e2f0efb7493902673d4df645424c5c13",
       "Requirements": [
         "Andromeda",
         "DBI",
@@ -189,6 +189,14 @@
       "Hash": "470851b6d5d0ac559e9d01bb352b4021",
       "Requirements": []
     },
+    "RColorBrewer": {
+      "Package": "RColorBrewer",
+      "Version": "1.1-3",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "45f0398006e83a5b10b72a90663d8d8c",
+      "Requirements": []
+    },
     "RJSONIO": {
       "Package": "RJSONIO",
       "Version": "1.3-1.8",
@@ -196,6 +204,34 @@
       "Repository": "CRAN",
       "Hash": "cd79d1874fb20217463451f8c310c526",
       "Requirements": []
+    },
+    "ROhdsiWebApi": {
+      "Package": "ROhdsiWebApi",
+      "Version": "1.3.2",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteRepo": "ROhdsiWebApi",
+      "RemoteUsername": "OHDSI",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "53565af2166f71e1a8729a85ead3370c0d1b4515",
+      "Hash": "162c73bc069bea31dee24f17fa5fb539",
+      "Requirements": [
+        "RJSONIO",
+        "SqlRender",
+        "checkmate",
+        "dplyr",
+        "httr",
+        "lubridate",
+        "openxlsx",
+        "purrr",
+        "readr",
+        "rlang",
+        "scales",
+        "stringr",
+        "tibble",
+        "tidyr"
+      ]
     },
     "RSQLite": {
       "Package": "RSQLite",
@@ -253,6 +289,25 @@
         "checkmate",
         "rJava",
         "rlang"
+      ]
+    },
+    "aouFI": {
+      "Package": "aouFI",
+      "Version": "0.1.0",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteRepo": "aouFI",
+      "RemoteUsername": "roux-ohdsi",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "64b5e721590c612a28914bb8c225c2aa8440a37b",
+      "Hash": "183b6757324351537f54fc650a7e97b8",
+      "Requirements": [
+        "dplyr",
+        "glue",
+        "lubridate",
+        "tibble",
+        "tidyr"
       ]
     },
     "arrow": {
@@ -378,6 +433,14 @@
         "vctrs"
       ]
     },
+    "colorspace": {
+      "Package": "colorspace",
+      "Version": "2.1-0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "f20c47fd52fae58b4e377c37bb8c335b",
+      "Requirements": []
+    },
     "cpp11": {
       "Package": "cpp11",
       "Version": "0.4.3",
@@ -392,6 +455,14 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "e8a1e41acf02548751f45c718d55aa6a",
+      "Requirements": []
+    },
+    "curl": {
+      "Package": "curl",
+      "Version": "5.0.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "e4f97056611e8e6b8b852d13b7400cf1",
       "Requirements": []
     },
     "dbplyr": {
@@ -475,6 +546,14 @@
       "Hash": "1d9e7ad3c8312a192dea7d3db0274fde",
       "Requirements": []
     },
+    "farver": {
+      "Package": "farver",
+      "Version": "2.1.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "8106d78941f34855c440ddb946b8f7a5",
+      "Requirements": []
+    },
     "fastmap": {
       "Package": "fastmap",
       "Version": "1.1.0",
@@ -521,6 +600,20 @@
         "vctrs"
       ]
     },
+    "httr": {
+      "Package": "httr",
+      "Version": "1.4.4",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "57557fac46471f0dbbf44705cc6a5c8c",
+      "Requirements": [
+        "R6",
+        "curl",
+        "jsonlite",
+        "mime",
+        "openssl"
+      ]
+    },
     "jsonlite": {
       "Package": "jsonlite",
       "Version": "1.8.4",
@@ -545,6 +638,14 @@
         "sodium",
         "yaml"
       ]
+    },
+    "labeling": {
+      "Package": "labeling",
+      "Version": "0.4.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "3d5108641f47470611a32d0bdf357a72",
+      "Requirements": []
     },
     "later": {
       "Package": "later",
@@ -571,10 +672,10 @@
     },
     "lubridate": {
       "Package": "lubridate",
-      "Version": "1.9.1",
+      "Version": "1.9.2",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "88ad585eb49669b7f2db3f5ef3c8307d",
+      "Hash": "e25f18436e3efd42c7c590a1c4c15390",
       "Requirements": [
         "generics",
         "timechange"
@@ -599,6 +700,24 @@
         "rlang"
       ]
     },
+    "mime": {
+      "Package": "mime",
+      "Version": "0.12",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "18e9c28c1d3ca1560ce30658b22ce104",
+      "Requirements": []
+    },
+    "munsell": {
+      "Package": "munsell",
+      "Version": "0.5.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "6dfe8bf774944bd5595785e3229d8771",
+      "Requirements": [
+        "colorspace"
+      ]
+    },
     "openssl": {
       "Package": "openssl",
       "Version": "2.0.5",
@@ -607,6 +726,18 @@
       "Hash": "b04c27110bf367b4daa93f34f3d58e75",
       "Requirements": [
         "askpass"
+      ]
+    },
+    "openxlsx": {
+      "Package": "openxlsx",
+      "Version": "4.2.5.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "c03b4c18d42da881fb8e15a085c2b9d6",
+      "Requirements": [
+        "Rcpp",
+        "stringi",
+        "zip"
       ]
     },
     "pillar": {
@@ -734,6 +865,14 @@
         "tibble"
       ]
     },
+    "remotes": {
+      "Package": "remotes",
+      "Version": "2.4.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "227045be9aee47e6dda9bb38ac870d67",
+      "Requirements": []
+    },
     "renv": {
       "Package": "renv",
       "Version": "0.16.0",
@@ -749,6 +888,23 @@
       "Repository": "CRAN",
       "Hash": "4ed1f8336c8d52c3e750adcdc57228a7",
       "Requirements": []
+    },
+    "scales": {
+      "Package": "scales",
+      "Version": "1.2.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "906cb23d2f1c5680b8ce439b44c6fa63",
+      "Requirements": [
+        "R6",
+        "RColorBrewer",
+        "farver",
+        "labeling",
+        "lifecycle",
+        "munsell",
+        "rlang",
+        "viridisLite"
+      ]
     },
     "snow": {
       "Package": "snow",
@@ -911,6 +1067,14 @@
         "lifecycle",
         "rlang"
       ]
+    },
+    "viridisLite": {
+      "Package": "viridisLite",
+      "Version": "0.4.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "62f4b5da3e08d8e5bcba6cac15603f70",
+      "Requirements": []
     },
     "vroom": {
       "Package": "vroom",

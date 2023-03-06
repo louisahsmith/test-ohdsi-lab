@@ -1,6 +1,11 @@
+# load packages
 library(dplyr)
 library(dbplyr)
-library(DatabaseConnector)
+library(DatabaseConnector) # make sure 6.0 or later
+
+# run the following one time and set these per the email
+# keyring::key_set("redshiftUser")
+# keyring::key_set("redshiftPassword")
 
 con <- connect(dbms = "redshift",
                server = "ohdsi-lab-redshift-cluster-prod.clsyktjhufn7.us-east-1.redshift.amazonaws.com/ohdsi_lab",

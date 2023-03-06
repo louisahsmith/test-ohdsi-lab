@@ -1,11 +1,11 @@
 DBMS:
-postgresql
+redshift
 
 Error:
-org.postgresql.util.PSQLException: No results were returned by the query.
+java.sql.SQLException: [JDBC Driver]com.amazon.dsi.dataengine.impl.DSISimpleRowCountResult cannot be cast to com.amazon.dsi.dataengine.interfaces.IResultSet
 
 SQL:
-DROP TABLE Codesets;
+ROLLBACK
 
 R version:
 R version 4.1.2 (2021-11-01)
@@ -23,5 +23,8 @@ Attached base packages:
 - base
 
 Other attached packages:
-- CohortGenerator (0.7.0)
+- aouFI (0.1.0)
+- magrittr (2.0.3)
+- dbplyr (2.3.0)
+- dplyr (1.1.0)
 - DatabaseConnector (6.0.0)
