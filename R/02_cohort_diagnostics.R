@@ -4,12 +4,12 @@ library(CohortDiagnostics)
 connectionDetails <- createConnectionDetails(dbms = "redshift",
                                              server = "ohdsi-lab-redshift-cluster-prod.clsyktjhufn7.us-east-1.redshift.amazonaws.com/ohdsi_lab",
                                              port = 5439,
-                                             user = keyring::key_get("redshiftUser"),
-                                             password = keyring::key_get("redshiftPassword")
+                                             user = keyring::key_get("lab_user"),
+                                             password = keyring::key_get("lab_password")
 )
 
 # my tables on the database
-mySchema <- paste0("work_", keyring::key_get("redshiftUser"))
+mySchema <- paste0("work_", keyring::key_get("lab_user"))
 
 # use webapi to pull cohort definition from atlas
 cohortIds <- 2 # cohort ids from atlas
@@ -17,8 +17,8 @@ baseUrl <- "https://atlas.roux-ohdsi-prod.aws.northeastern.edu/WebAPI"
 
 ROhdsiWebApi::authorizeWebApi(baseUrl, 
                               authMethod = "db", 
-                              webApiUsername = keyring::key_get("redshiftUser"), 
-                              webApiPassword = keyring::key_get("redshiftPassword"))
+                              webApiUsername = keyring::key_get("lab_user"), 
+                              webApiPassword = keyring::key_get("lab_password"))
 
 cohortDefinitionSet <- ROhdsiWebApi::exportCohortDefinitionSet(baseUrl = baseUrl,
                                                                cohortIds = cohortIds)
